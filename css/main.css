@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.625em;
+  margin: 2em;
+  width: 21em;
+  overflow: hidden;
+}
+.card .card-image {
+  background: url("../images/image-product-mobile.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 15em;
+}
+.card .card-content {
+  padding: 1.5em;
+}
+.card .category {
+  color: hsl(228, 12%, 48%);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.3125rem;
+}
+.card .title {
+  font-family: "Fraunces";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin-top: 0;
+}
+.card .description {
+  font-size: 0.87rem;
+  font-weight: 500;
+  line-height: 1.43rem;
+  color: hsl(228, 12%, 48%);
+}
+.card .price {
+  display: flex;
+  align-items: center;
+  gap: 1.18em;
+  line-height: 0;
+}
+.card .price .sale {
+  font-family: "Fraunces";
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+.card .price .msrp {
+  font-size: 0.81rem;
+  text-decoration: line-through;
+}
+.card .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+  background: hsl(158, 36%, 37%);
+  padding: 0.5em 2em;
+  border-radius: 0.5em;
+  margin-top: 0.8em;
+}
+.card .button img {
+  width: 0.9em;
+  height: 1em;
+}
+.card .button .text {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.card .button:hover {
+  background: #1A4032;
+}
+
+@media only screen and (min-width: 1440px) {
+  .card {
+    display: flex;
+    width: 37.5em;
+    height: 28.1em;
+  }
+  .card .card-image {
+    background: url("../images/image-product-desktop.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .card .card-content {
+    width: 85%;
+  }
+}/*# sourceMappingURL=main.css.map */

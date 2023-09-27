@@ -1,0 +1,128 @@
+$darkcyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$verydarkblue: hsl(212, 21%, 14%);
+$darkgrayishblue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $cream;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: $white;
+    border-radius: 0.625em;
+    margin: 2em;
+    width: 21em;
+    overflow: hidden;
+
+    .card-image {
+        background: url("../images/image-product-mobile.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 15em;
+    }
+
+    .card-content {
+        padding: 1.5em;
+    }
+
+    .category {
+        color: $darkgrayishblue;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.3125rem;
+    }
+
+    .title {
+        font-family: "Fraunces";
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2rem;
+        margin-top: 0;
+    }
+
+    .description {
+        font-size: 0.87rem;
+        font-weight: 500;
+        line-height: 1.43rem;
+        color: $darkgrayishblue;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 1.18em;
+        line-height: 0;
+
+        .sale {
+            font-family: "Fraunces";
+            font-size: 2rem;
+            font-weight: 700;
+            color: $darkcyan;
+        }
+
+        .msrp {
+            font-size: 0.81rem;
+            text-decoration: line-through;
+        }
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7em;
+        background: $darkcyan;
+        padding: 0.5em 2em;
+        border-radius: 0.5em;
+        margin-top: 0.8em;
+
+        img {
+            width: 0.9em;
+            height: 1em;
+        }
+
+        .text {
+            font-size: 0.87rem;
+            font-weight: 700;
+            color: $white;
+        }
+
+        &:hover {
+            background: #1A4032;
+        }
+    }
+ }
+
+ @media only screen and (min-width: 1440px) {
+    .card {
+        display: flex;
+        width: 37.5em;
+        height: 28.1em;
+
+        .card-image {
+            background: url("../images/image-product-desktop.jpg") no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-content {
+            width: 85%;
+        }
+    }
+ }
